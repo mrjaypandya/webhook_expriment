@@ -13,15 +13,11 @@ server.use(bodyParser.urlencoded({
 server.use(bodyParser.json());
 
 var dbURI='mongodb://jay_admin:jay12_admin@ds211774.mlab.com:11774/trux_ait';
-mongoose.connect(dbURI, 
-    {useNewUrlParser: true },function(err)=>{
-    {
-        if(err) {
-            console.log('Some problem with the connection ' +err);
-        } else {
-            console.log('The Mongoose connection is ready');
-        }
-    })
+mongoose.connect(dbURI, { useMongoClient: true }, () => {
+
+    console.log("DB is connected")
+
+})
 
 
 

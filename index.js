@@ -1,5 +1,5 @@
 'use strict';
-
+var mongoose = require('mongoose')
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
@@ -11,6 +11,15 @@ server.use(bodyParser.urlencoded({
 }));
 
 server.use(bodyParser.json());
+mongoose.connect('mongodb://jay_admin:jay12_admin@ds211774.mlab.com:11774/trux_ait', 
+    {useNewUrlParser: true },function(err)=>{
+    {
+        if(err) {
+            console.log('Some problem with the connection ' +err);
+        } else {
+            console.log('The Mongoose connection is ready');
+        }
+    });
 
 server.post('/get-movie-details', (req, res) => {
 

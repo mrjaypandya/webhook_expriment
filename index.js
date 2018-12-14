@@ -19,7 +19,7 @@ mongoose.connect('mongodb://jay_admin:jay12_admin@ds211774.mlab.com:11774/trux_a
         } else {
             console.log('The Mongoose connection is ready');
         }
-    })
+    });
 
 server.post('/get-movie-details', (req, res) => {
 

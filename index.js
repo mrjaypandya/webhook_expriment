@@ -12,7 +12,7 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 mongoose.connect('mongodb://jay_admin:jay12_admin@ds211774.mlab.com:11774/trux_ait', 
-    {useNewUrlParser: true },function(err)=>{
+    {useNewUrlParser: true },function(err) => {
     {
         if(err) {
             console.log('Some problem with the connection ' +err);

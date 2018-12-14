@@ -22,7 +22,6 @@ Mangoose.connect(dbURI,function(err){
     }
 
 })
-module.exports={Mongoose};
 
 
 
